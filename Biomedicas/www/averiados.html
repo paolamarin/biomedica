@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0-rc.1.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+
+   <script>
+       $(document).ready(function () {
+                $("#fecha").datepicker({
+                    showOtherMonths: true,
+                    selectOtherMonths: true,
+                    changeMonth: true,
+                    changeYear: true,
+                    showButtonPanel: true,
+                    dateFormat: 'yy-mm-dd'
+                });
+                
+    });
+      
+  </script>
+</head>
+<body background="img/sena.png">
+  <div data-role="page">
+
+      <div data-role="panel" id="panel" data-position="right" data-theme="a" data-display="push">
+               
+          <ul id="menu">
+               <li><a href="averiados.html" rel="external"> <img src="img/solucion.png"> Equipos Averiados</a></li>
+                <li><a href="#"><img src="img/pieza.png">Piezas Solicitadas</a></li>
+            </ul>
+      </div>
+
+    <div data-role="header" data-position="fixed">
+      <a href="Equipos.html" rel="external" data-iconpos="notext" data-role="button" data-icon="home" >Inicio</a>
+      <h1>BIOMEDICA</h1>
+      <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
+    </div>
+       
+
+    <div data-role="content" role="main">
+        <center>
+            <h1><img src="img/reparacion.png"> </h1>
+            
+        </center>
+       
+
+      <br>
+      <form action="registro.php" method="post">
+        <div data-role="fieldcontain">
+            <label for="fecha"> Fecha:</label> 
+            <input type="text" data-role="date" data-inline="true" name="fecha" id="fecha">        </div>
+        <div data-role="fieldcontain">
+            <label for="nombre"> Nombre equipo: </label> <input type="text" name="nombre" autofocus required/>
+        </div>
+        <div data-role="fieldcontain">
+            <label for="marca"> Marca: </label> <input type="text" name="marca" autofocus required />
+        </div>
+        <div data-role="fieldcontain">
+            <label for="modelo"> Modelo: </label> <input type="text" name="modelo" autofocus required />
+        </div>
+        <div data-role="fieldcontain">
+            <label for="serie"> Serie: </label> <input type="text" name="serie"/>
+        </div>
+         <div data-role="fieldcontain">
+            <label for="tipo"> Tipo de Daño: </label>
+            <textarea type="text" name="tipo" autofocus required></textarea>
+         </div>
+         <div data-role="controlgroup" data-type="horizontal" > 
+             <input style="color: #f3f3f3; background-color: #2c3e50" type="submit" name="submit" value="Enviar"  />
+             <input style="color: #f3f3f3; background-color: #2c3e50" type="submit" name="submit" value="editar"  />
+            
+        </div>
+      
+     </form>
+     </div>
+    
+    
+       <div data-role="footer" data-position="fixed">
+          
+        <a href="index.html" rel="external" class="ui-btn ui-icon-flat-man ui-btn-icon-left"  style="float: left;" >Cerrar Sesion</a>
+        <a href="#" rel="external" class="ui-btn ui-icon-flat-mail ui-btn-icon-left" style="float: right;" > Contactenos</a>
+
+      </div>
+  
+</div>
+      
+  <div id="highlight"> </div>
+</body>
+</html>

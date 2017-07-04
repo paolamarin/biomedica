@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  
+  <script src="js/jquery.mobile-1.4.0-rc.1.js"></script>
+</head>
+
+
+<body background="img/sena.png">
+   <div data-role="page">
+  
+      
+    <div data-role="header" data-position="fixed">
+        <a href="index.html" rel="external" data-iconpos="notext" data-role="button" data-icon="home" >Inicio</a>
+    
+      <h1>BIOMEDICA</h1>
+      
+    </div>
+       
+
+    <div data-role="content" role="main">
+        <center><img src="img/medicina.png"><h1>BIENVENIDOS</h1>
+            <H2>Mantenimiento de Equipos Biomedicos</H2>
+        </center>
+        <SCRIPT  language=JavaScript> 
+            function go(){
+                if (document.form.password.value=='1234' && document.form.usuario.value=='paola'){ 
+                        document.form.submit(); 
+                    }else{ 
+                 alert("Porfavor ingrese, nombre de usuario y contraseña correctos."); 
+                    } 
+                } 
+        </SCRIPT> 
+        
+
+        <FORM name=form action="Equipos.html" rel="external" >
+            <label> Usuario: </label>
+            <INPUT type=text name=usuario id="nombre"> 
+            
+            <label>Contraseña:</label>
+            <INPUT type=password name=password> 
+            
+            <fieldset class="ui-grid-a">
+                <div class="ui-block-a">
+                    <INPUT onclick=go() type=button value=Acceder>
+                </div>
+                <div class="ui-block-b">
+                    ¿No estas registrado? <a href="registro.html"><font color="#000000"><br><b>REGISTRATE</b></font></a>
+                </div>
+            </fieldset>
+
+        </FORM>
+        
+  
+    </div>
+      
+      <div data-role="footer" data-position="fixed">
+          <h4>MANIZALES &copy;2017</h4>
+      </div>
+  </div>
+    
+    
+
+  <div id="highlight"> </div>
+</body>
+</html>

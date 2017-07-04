@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0-rc.1.js"></script>
+  
+  
+</head>
+<body>
+  <div data-role="page">
+
+      <div data-role="panel" id="panel" data-position="right" data-theme="a" data-display="push"  data-transition="Slide">
+               
+           <ul id="menu">
+                <li><a href="mantenimiento.html" rel="external">Mantenimiento de Equipos</a></li>
+                <li><a href="#">Equipos Averiados</a></li>
+                <li><a href="#">Piezas Solicitadas</a></li>
+                <li><a href="#">Ficha Tecnica</a></li>
+                <li><a href="#">Soporte Tecnico</a></li>
+                <li><a href="index.html" rel="external">Cerrar Sesion</a></li>
+            </ul>
+      </div>
+
+    <div data-role="header">
+        <a data-iconpos="notext" data-role="button" data-icon="home" href="">Home</a>
+      <h1>BIOMEDICA</h1>
+      <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
+    </div>
+     
+     
+
+    <div data-role="content" role="main">
+        <center>
+            <h1>Informaci&oacute;n de Equipos </h1>
+        </center>
+    
+      <div data-role="collapsible-set" data-theme="b" data-content-theme="b">
+        <div data-role="collapsible" data-collapsed-icon="flat-eye" data-expanded-icon="flat-cross" data-collapsed="false">
+          <h3>Incubador</h3>
+           <center><img src="img/incubador.jpg" width="200" height="120" ></center>
+            <p style="text-align: justify ">
+              La incubadora funciona casi como un “&uacute;tero artificial”, 
+           creando un ambiente óptimo para el recién nacido. Hay varios 
+           aspectos importantes a tener en cuenta en el funcionamiento de la incubadora 
+           y sus efectos sobre el beb&eacute;.  
+            </p>
+        </div>
+        <div data-role="collapsible" data-collapsed-icon="flat-eye" data-expanded-icon="flat-cross">
+          <h3>M&aacute;quina de Anestesia</h3>
+          <center><img src="img/anestesia.jpg" width="150" height="120" ></center>
+            <p style="text-align: justify">
+               El paciente anestesiado inspira una mezcla de O2, el vapor de un l&iacute;quido vol&aacute;til 
+              si es necesario, N2O y otros gases de hidrocarburo halogenado anest&eacute;sico. 
+            </p>
+        </div>
+        <div data-role="collapsible" data-collapsed-icon="flat-eye" data-expanded-icon="flat-cross">
+          <h3>Desfibrilador</h3>
+          <center><img src="img/desfibrilador.png" width="185" height="130" ></center>
+            <p style="text-align: justify">
+                Un desfibrilador es un dispositivo que administra una descarga el&eacute;ctrica al coraz&oacute;n 
+                a través de la pared tor&aacute;cica. Sus sensores integrados analizan el ritmo cardiaco del 
+                paciente, determinan cuando es necesaria la desfibrilaci&oacute;n y administran la descarga 
+                al nivel de intensidad apropiado.
+            </p>
+        </div>
+        <div data-role="collapsible" data-collapsed-icon="flat-eye" data-expanded-icon="flat-cross">
+          <h3>Bomba de Infusi&oacute;n</h3>
+          <center><img src="img/bomba.jpg" width="150" height="100" ></center>
+            <p style="text-align: justify">
+                Las bombas de infusi&oacute;n generan presi&oacute;n mec&aacute;nica para mover el fluido a trav&eacute;s 
+                de un tubo hacia el sistema vascular del paciente, ayudando a administrar los fluidos 
+                con m&aacute;s precisi&oacute;n.
+            </p>
+        </div>
+      </div>
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+
+      <div data-role="fieldcontain">
+        <fieldset data-role="controlgroup">
+          <input type="radio" name="radio-choice-a" data-theme="c" id="radio-choice-1-a" value="choice-1" checked="checked" />
+          <label for="radio-choice-1-a">Radio 1</label>
+
+          <input type="radio" name="radio-choice-a" data-theme="c" id="radio-choice-1-b" value="choice-2"  />
+          <label for="radio-choice-1-b">Radio 2</label>
+          <input type="checkbox" name="checkbox-a" data-theme="c" id="checkbox-a" checked="checked" />
+          <label for="checkbox-a">Checkbox</label>
+        </fieldset>
+      </div>
+
+      <div data-role="fieldcontain">
+        <a href="#" data-role="button" data-icon="home" data-iconpos="notext" data-theme="b" data-inline="true">Home</a>
+        <a href="#" data-role="button" data-icon="flat-video" data-iconpos="notext" data-theme="b" data-inline="true">Video</a>
+        <a href="#" data-role="button" data-icon="flat-time" data-iconpos="notext" data-theme="b" data-inline="true">Time</a>
+        <a href="#" data-role="button" data-icon="flat-settings" data-iconpos="notext" data-theme="b" data-inline="true">Settings</a>
+        <a href="#" data-role="button" data-icon="flat-plus" data-iconpos="notext" data-theme="b" data-inline="true">Plus</a>
+        <a href="#" data-role="button" data-icon="flat-new" data-iconpos="notext" data-theme="b" data-inline="true">New</a>
+        <a href="#" data-role="button" data-icon="flat-menu" data-iconpos="notext" data-theme="b" data-inline="true">Menu</a>
+        <a href="#" data-role="button" data-icon="flat-man" data-iconpos="notext" data-theme="b" data-inline="true">Man</a>
+        <a href="#" data-role="button" data-icon="flat-mail" data-iconpos="notext" data-theme="b" data-inline="true">Mail</a>
+        <a href="#" data-role="button" data-icon="flat-lock" data-iconpos="notext" data-theme="b" data-inline="true">Lock</a>
+        <a href="#" data-role="button" data-icon="flat-location" data-iconpos="notext" data-theme="b" data-inline="true">Location</a>
+        <a href="#" data-role="button" data-icon="flat-heart" data-iconpos="notext" data-theme="b" data-inline="true">Heart</a>
+        <a href="#" data-role="button" data-icon="flat-eye" data-iconpos="notext" data-theme="b" data-inline="true">Eye</a>
+        <a href="#" data-role="button" data-icon="flat-cross" data-iconpos="notext" data-theme="b" data-inline="true">Cross</a>
+        <a href="#" data-role="button" data-icon="flat-cmd" data-iconpos="notext" data-theme="b" data-inline="true">Cmd</a>
+        <a href="#" data-role="button" data-icon="flat-checkround" data-iconpos="notext" data-theme="b" data-inline="true">Checkround</a>
+        <a href="#" data-role="button" data-icon="flat-calendar" data-iconpos="notext" data-theme="b" data-inline="true">Calendar</a>
+        <a href="#" data-role="button" data-icon="flat-bubble" data-iconpos="notext" data-theme="b" data-inline="true">Bubble</a>
+        <a href="#" data-role="button" data-icon="flat-volume" data-iconpos="notext" data-theme="b" data-inline="true">Volume</a>
+        <a href="#" data-role="button" data-icon="flat-camera" data-iconpos="notext" data-theme="b" data-inline="true">Camera</a>
+      </div>
+
+      <select name="flip-1" id="flip-1" data-role="slider">
+        <option value="off">Off</option>
+        <option value="on" selected>On</option>
+      </select>
+
+      <div data-role="fieldcontain">
+        <div data-role="controlgroup" data-type="horizontal">
+          <a href="#" data-icon="flat-mail" data-theme="a" data-iconpos="notext" data-role="button">Yes</a>
+          <a href="#" data-icon="flat-camera" data-theme="a" data-iconpos="notext" data-role="button">Yes</a>
+          <a href="#" data-icon="flat-heart" data-theme="a" data-iconpos="notext" data-role="button">Yes</a>
+          <a href="#" data-icon="flat-eye" data-theme="a" data-iconpos="notext" data-role="button">Yes</a>
+        </div>
+      </div>
+
+      <div data-role="fieldcontain">
+        <select name="select-choice" id="select-choice-a" data-native-menu="false" data-theme="a">
+          <option value="standard">Option 1</option>
+          <option value="rush">Option 2</option>
+          <option value="express">Option 3</option>
+          <option value="overnight">Option 4</option>
+        </select>
+      </div>
+
+      <input type="text" placeholder="Text Input" />
+      <div data-role="fieldcontain">
+        <input type="range" name="slider" value="50" min="0" max="100" data-highlight="true" />
+      </div>
+      
+     
+    </div>
+  </div>
+
+  <div id="highlight"> </div>
+</body>
+</html>

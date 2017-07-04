@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+
+  <script src="js/jquery.mobile-1.4.0-rc.1.js"></script>
+   <script>
+       $(document).ready(function () {
+                $("#fecha").datepicker({
+                    showOtherMonths: true,
+                    selectOtherMonths: true,
+                    changeMonth: true,
+                    changeYear: true,
+                    showButtonPanel: true,
+                    dateFormat: 'yy-mm-dd'
+                });
+                
+    });
+      
+  </script>
+</head>
+<body background="img/sena.png">
+  <div data-role="page">
+
+      <div data-role="panel" id="panel" data-position="right" data-theme="a" data-display="push">
+               
+           <ul id="menu">
+               <li><a href="averiados.html" rel="external"> <img src="img/solucion.png"> Equipos Averiados</a></li>
+                <li><a href="#"><img src="img/pieza.png">Piezas Solicitadas</a></li>
+            </ul>
+      </div>
+
+    <div data-role="header" data-position="fixed">
+      <a href="Equipos.html" rel="external" data-iconpos="notext" data-role="button" data-icon="home" >Inicio</a>
+      <h1>BIOMEDICA</h1>
+      <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
+    </div>
+       
+
+    <div data-role="content" role="main">
+        <center>
+            <h1>FICHA DE MANTENIMIENTO BOMBA DE INFUSIÓN </h1>
+            <img src="img/bomba.jpg" width="95" height="95" >
+        </center>
+       
+
+      <br>
+      <form action="registro.php" method="post">
+        <div data-role="fieldcontain">
+            <label for="fecha"> Fecha:</label><input type="text" data-role="date" data-inline="true" name="fecha" id="fecha">       
+        </div>
+        <div data-role="fieldcontain">
+        <label for="nombre">Nombre del equipo:</label> <input type="text" name="nombre" autofocus required/>
+        </div>
+        <div data-role="fieldcontain">
+        <label for="marca"> Marca: </label> <input type="text" name="marca" autofocus required />
+        </div>
+        <div data-role="fieldcontain">
+        <label for="modelo"> Modelo: </label> <input type="text" name="modelo" autofocus required />
+        </div>
+        <div data-role="fieldcontain">
+        <label for="serie"> Serie: </label> <input type="text" name="serie"/>
+        </div>
+        <div data-role="fieldcontain">
+        <label for="tecnico"> N° Inv. Tecnico: </label> <input type="text" name="tecnico" autofocus required />
+        </div>
+        <div data-role="fieldcontain">
+        <label for="id"> ID: </label> <input type="text" name="id" autofocus required />
+        </div>
+        <div data-role="fieldcontain">
+        <label for="codigo"> Código de Técnico: </label> <input type="text" name="cod" autofocus required/>
+        </div>
+      </form>
+      <br>
+      <table border="0">
+          <tr>
+              <td>
+                Inspeccionar las condiciones ambientales en las que se encuentra el equipo.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>  
+              </td>
+          </tr>
+          <tr>
+              <td>
+                Efectuar limpieza integral externa del equipo.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>  
+              </td>
+          </tr>
+          <tr>
+              <td>
+               Revisar partes y accesorios metalicos y sinteticos 
+              (soportes, cabezal, tapadera, empaques, portatubos, etc.)
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+               Efectuar limpieza integral interna del equipo.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+           <tr>
+              <td>
+               Revisar conexiones electricas, internas y externas.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+               Verificar perillas de control y señalizaciones.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+               Revisar el motor y sus componentes (carbones, baleros, eje, acoplamiento, etc.)
+               cambiar carbones y lubricar si es necesario.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+               Verificar el balance del plato con carga.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+           <tr>
+              <td>
+               Verificar medidor de tiempo.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+           <tr>
+              <td>
+               Verificar la velocidad de funcionamiento en todo el rango
+               (máximo 3,500 - 4,500 r.p.m).
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+           <tr>
+              <td>
+               Comprobar sistema de frenado y mecanismos de seguridad.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+           <tr>
+              <td>
+               Comprobar operatividad de la unidad en todos los modos de trabajo 
+               (inspección de ruidos o vibraciones inusuales).
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+          
+       </table>
+      </div>
+   
+
+   
+       <div data-role="footer" data-position="fixed">
+          
+            <a href="index.html" rel="external" class="ui-btn ui-icon-flat-man ui-btn-icon-left" style="float: left;" >Cerrar Sesion</a>
+            <a href="#" rel="external" class="ui-btn ui-icon-flat-mail ui-btn-icon-left" style="float: right;" > Contactenos</a>
+
+      </div>
+  </div>
+  
+
+  <div id="highlight"> </div>
+</body>
+</html>

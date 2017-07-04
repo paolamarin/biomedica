@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  
+   <script src="js/jquery.mobile-1.4.0-rc.1.js"></script>
+   
+   <style>
+       p {
+        margin: 20px;
+        }
+
+
+   </style>
+
+</head>
+<body background="img/sena.png">
+    
+  <div data-role="page">
+    
+
+      <div data-role="panel" id="panel" data-position="right" data-theme="a" data-display="push"  data-transition="Slide">
+               
+           <ul id="menu">
+               <li><a href="averiados.html" rel="external"> <img src="img/solucion.png"> Equipos Averiados</a></li>
+                <li><a href="#"><img src="img/pieza.png">Piezas Solicitadas</a></li>
+            </ul>
+      </div>
+
+    <div data-role="header" data-position="fixed">
+        <a data-iconpos="notext" data-role="button" data-icon="home" href="Equipos.html" rel="external" >Inicio</a>
+      <h1>BIOMEDICA</h1>
+      <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
+    </div>
+     
+     
+
+    <div data-role="content" role="main">
+        <center>
+            <h1>Informaci&oacute;n de Equipos </h1>
+        </center>
+    
+      <div data-role="collapsible-set" data-theme="b" data-content-theme="b" >
+        <div data-role="collapsible" data-collapsed-icon="flat-eye" data-expanded-icon="flat-cross" data-collapsed="false">
+          <h3>Incubador</h3>
+          <br><img style="float: left;" src="img/incubador.jpg" width="290" height="185" >
+          <p style="text-align: justify ">
+                El término incubadora suele aplicarse a los dispositivos empleados para mantener 
+                calientes a niños prematuros o débiles. El recién nacido pierde temperatura de cuatro 
+                formas diferentes, radiación, evaporización, condensación y conducción. Este equipo 
+                médico está diseñado para evitar pérdidas de temperaturas en estos niños para lo cual 
+                consta de un motor que hace circular corriente de aire dentro de la misma a temperatura 
+                preestablecida, para que esta se mantenga entre 36 y 37 °C, además proporciona diferentes 
+                niveles de humedad. </p>
+          <br>
+          <h2><b>Características</b></h2>
+            <p style="text-align: justify ">Generalmente la cubierta es de acrílico simple o doble que impide las perdidas por radiación 
+                y facilita la observación continua del paciente. Tiene diferentes orificios que permiten la 
+                manipulación del recién nacido y la entrada de equipos de ventilación, de monitorización y vías 
+                venosas para la administración de medicamentos y alimentación parenteral. Las incubadoras 
+                neonatales modernas cuentan con sensores electrónicos y pantallas lumínicas que permiten conocer 
+                de forma continua los rangos de temperatura y humedad. También pueden contar con balanzas incluidas 
+                que evitan la manipulación excesiva del paciente y filtros para purificar el aire. Se usa igualmente 
+                en niños de más peso cunas con fuentes de calor radiante.</p>
+          
+           <div style="text-align: center">
+               <a href="incubador.html" rel="external" data-role="button" data-inline="true"><img src="img/ingresar.jpg"> Ficha  de Mantenimiento</a>
+           </div>
+        </div>
+          
+        <div data-role="collapsible" data-collapsed-icon="flat-eye" data-expanded-icon="flat-cross">
+          <h3>M&aacute;quina de Anestesia</h3>
+          <br><img style="float: right;" src="img/anestesia.jpg" width="235" height="195" >
+                        <p style="text-align: justify">
+                          La máquina de anestesia fue concebida originalmente como un aparato, capaz de administrar gases 
+                          anestésicos aprovechando la absorción pulmonar de estos.
+                          Con el tiempo fue evolucionando hacia formas más sofisticadas de vaporizar líquidos y paralelamente 
+                          de control de la función respiratoria, la cual como sabemos se puede ver afectada tanto por el estado 
+                          anestésico propiamente tal, como por el acto quirúrgico (toracotomía, laparotomía, entre otros) o por 
+                          necesidades derivadas del mismo acto (apnea, hiperventilación, etc). <br><br>
+                          Lo anterior se ha ido complementando en el tiempo con el agregado de capacidades de monitorización de 
+                          las variables respiratorias, de los niveles anestésicos propiamente tales en el organismo, y de la hemodinamia 
+                          del paciente, conformando así una verdadera estación de trabajo que permite:
+                        </p>
+                        <ol>
+                            <li>Administrar anestesia.</li>
+                            <li> Controlar su profundidad.</li>
+                            <li>Manejar por completo la respiración del paciente.</li>
+                            <li>Monitorizar todas las variables respiratorias.</li>
+                            <li>Monitorizar su propio funcionamiento.</li>
+                            <li>Incorporar otras formas de monitorización de variados parámetros necesarios de controlar 
+                                durante la anestesia general: hemodinamia, temperatura, transmisión neuromuscular, EEG, entre otras.</li>
+                        </ol>
+                     
+          <div style="text-align: center">
+               <a href="anestesia.html" rel="external" data-role="button" data-inline="true"><img src="img/ingresar.jpg"> Ficha de Mantenimiento</a>
+           </div>
+        </div>
+          
+        <div data-role="collapsible" data-collapsed-icon="flat-eye" data-expanded-icon="flat-cross">
+          <h3>Desfibrilador</h3>
+          <table data-role="table" data-mode="rowtoggle" class="ui-responsive" id="myTable">
+              <tbody>
+                  <tr>
+                      <td><br><img src="img/desfibrilador.png" width="195" height="140" ></td>
+                      <td><p style="text-align: justify">
+                        Un desfibrilador es un dispositivo que administra una descarga el&eacute;ctrica al coraz&oacute;n 
+                        a través de la pared tor&aacute;cica. Sus sensores integrados analizan el ritmo cardiaco del 
+                        paciente, determinan cuando es necesaria la desfibrilaci&oacute;n y administran la descarga 
+                        al nivel de intensidad apropiado.
+                      </p></td>
+                  </tr>
+              </tbody>
+          </table>
+          <div style="text-align: center">
+               <a href="#" rel="external" data-role="button" data-inline="true"> <img src="img/ingresar.jpg">Ficha de Mantenimiento</a>
+           </div>
+        </div>
+          
+        <div data-role="collapsible" data-collapsed-icon="flat-eye" data-expanded-icon="flat-cross">
+          <h3>Bomba de Infusi&oacute;n</h3>
+          <table data-role="table" data-mode="rowtoggle" class="ui-responsive" id="myTable">
+              <tbody>
+                  <tr>
+                      <td><br><img src="img/bomba.jpg" width="195" height="150" ></td>
+                      <td><p style="text-align: justify">
+                            Las bombas de infusi&oacute;n generan presi&oacute;n mec&aacute;nica para mover el fluido a trav&eacute;s 
+                            de un tubo hacia el sistema vascular del paciente, ayudando a administrar los fluidos 
+                            con m&aacute;s precisi&oacute;n.
+                        </p>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+          <center></center>
+          <div style="text-align: center">
+               <a href="infusion.html" rel="external" data-role="button" data-inline="true"><img src="img/ingresar.jpg"> Ficha de Mantenimiento</a>
+           </div>
+        </div>
+      </div>
+    
+    </div>
+     
+      <div data-role="footer" data-position="fixed">
+          
+        <a href="index.html" rel="external" class="ui-btn ui-icon-flat-man ui-btn-icon-left"  style="float: left;" >Cerrar Sesion</a>
+        <a href="#" rel="external" class="ui-btn ui-icon-flat-mail ui-btn-icon-left" style="float: right;" > Contactenos</a>
+
+      </div>
+      
+  </div>
+
+  <div id="highlight"> </div>
+</body>
+</html>

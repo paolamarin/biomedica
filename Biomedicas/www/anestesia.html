@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+ 
+  <script src="js/jquery.mobile-1.4.0-rc.1.js"></script>
+
+   <script>
+       $(document).ready(function () {
+                $("#fecha").datepicker({
+                    showOtherMonths: true,
+                    selectOtherMonths: true,
+                    changeMonth: true,
+                    changeYear: true,
+                    showButtonPanel: true,
+                    dateFormat: 'yy-mm-dd'
+                });
+                
+    });
+      
+  </script>
+ 
+</head>
+<body background="img/sena.png">
+  <div data-role="page">
+
+      <div data-role="panel" id="panel" data-position="right" data-theme="a" data-display="push">
+               
+          <ul id="menu">
+               <li><a href="averiados.html" rel="external"> <img src="img/solucion.png"> Equipos Averiados</a></li>
+                <li><a href="#"><img src="img/pieza.png">Piezas Solicitadas</a></li>
+            </ul>
+      </div>
+
+    <div data-role="header" data-position="fixed">
+      <a href="Equipos.html" rel="external" data-iconpos="notext" data-role="button" data-icon="home" >Inicio</a>
+      <h1>BIOMEDICA</h1>
+      <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
+    </div>
+       
+
+    <div data-role="content" role="main">
+        <center>
+            <h1>FICHA DE MANTENIMIENTO M&Aacute;QUINA DE ANESTESIA </h1>
+            <img src="img/anestesia.jpg" width="200" height="150" >
+        </center>
+       
+
+      <br>
+      <form action="registro.php" method="post">
+        <div data-role="fieldcontain">
+            <label for="fecha"> Fecha:</label><input type="text" data-role="date" data-inline="true" name="fecha" id="fecha">        </div>
+        
+        <div data-role="fieldcontain">
+        <label for="nombre">Nombre del equipo:</label> <input type="text" name="nombre" autofocus required/>
+        </div>
+        <div data-role="fieldcontain">
+        <label for="marca"> Marca: </label> <input type="text" name="marca" autofocus required />
+        </div>
+        <div data-role="fieldcontain">
+        <label for="modelo"> Modelo: </label> <input type="text" name="modelo" autofocus required />
+        </div>
+        <div data-role="fieldcontain">
+        <label for="serie"> Serie: </label> <input type="text" name="serie"/>
+        </div>
+        <div data-role="fieldcontain">
+        <label for="tecnico"> N° Inv. Tecnico: </label> <input type="text" name="tecnico" autofocus required />
+        </div>
+        <div data-role="fieldcontain">
+        <label for="id"> ID: </label> <input type="text" name="id" autofocus required />
+        </div>
+        <div data-role="fieldcontain">
+        <label for="codigo"> Código de Técnico: </label> <input type="text" name="cod" autofocus required/>
+        </div>
+      </form>
+      
+      <br>
+      <table border="0">
+          <tr>
+              <td>
+                Inspeccionar las condiciones ambientales en las que se encuentra el equipo.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>  
+              </td>
+          </tr>
+          <tr>
+              <td>
+                Inspeccionar la integridad meca&aacute;nica de toda la unidad en 
+                general; &iacute;dentificar daños y partes faltantes.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>  
+              </td>
+          </tr>
+          <tr>
+              <td>
+               Limpiar las ruedas de ma máquina con solución limpiadora para 
+               evitar descargas estáticas
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Revisar la integridad del conector y cable eléctrico.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+           <tr>
+              <td>
+                  <b>1. Sistema de gases.</b>
+              </td>
+              <td>
+                
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Verificar la integridad de los yugos sostenedores de los cilindros
+                  de gas de baja presión(conector a pared).
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Revisar el estado y lectura de los medidores de presión; verificar
+                  su validez (compararla con la presión medida a la salida).
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Revisar el funcionamiento de la válvulas controladoras de flujo
+                  (válvulas de inspiración y espiración).
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+           <tr>
+              <td>
+                 Verificar presiones en los reguladores.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+           <tr>
+              <td>
+                  Inspeccionar la tubería y adaptadores por fuga de gas.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+           <tr>
+              <td>
+                 Verificar que no existan fugas en el sistema de alta presión, 
+                 para esto abra los cilindros pequeños y después ciérrelos y si
+                 en los manómetros de trabajo har decremento de presión, busque
+                 la fuga con agua y jabón.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+           <tr>
+              <td>
+                  Verificar la ausencia de fugas en el sistema de baja presión, 
+                  para esto abra los cilindros grandes y después ciérrelos y si
+                  en los manómetros de los reguladores la presión baja, busque la fuga
+                  con agua y jabón.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+           <tr>
+              <td>
+                  Inspeccionar todos los accesorios de hule, empaques O-ring,
+                  diagramas y otros empaques.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+           <tr>
+              <td>
+                  Efectuar limpieza de flujómetros, revisar la calibración de estos.
+                 
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+           <tr>
+              <td>
+                  Revisar fisicamente los vaporizadores, revise su calibración.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <b>2. Canister</b>
+              </td>
+              <td>
+                
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Drenar y limpiar el absorbedor(canister).
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Verificar el estado físico del canister.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Revisar empaques del canister, cambiar si es necesario.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Revisar físicamente las válvulas check de anhalación y exhalación,
+                  cambiarlas si es necesario.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Revisar y calibrar el medidor de presión.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Revisar la válvula APL, si está operando (cambios de empaque y diagramas
+                  se harán en el mantenimiento preventivo).
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Haga la prueba de operación con toda la tubería conectada
+                  para verificar la expulsión del gas.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Verificar la operación y control de flujo de las válvulas de flujo
+                  de O2 y NO2, aplique la ley de los tres dedos y visualmente.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Verificar el funcionamiento de todas las alarmas.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <b>3. Ventilador de anestesia</b>
+              </td>
+              <td>
+                
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Limpiar el exterior del ventilador e inspeccione la integridad
+                  física de la unidad.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                 Revisar el sistema de accionamiento del fuelle y su correcto funcionamiento.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Verificar el funcionamiento dek ventilador, asegúrese que el
+                  operador lo utiliza eficazmente.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Inspeccionar los componentes eléctricos, identificar componentes
+                  deteriorados o sobrecalentados.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Efectuar pruebas de seguridad eléctrica<a href="#" rel="external">(ver).</a>
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Verificar el funcionamiento del equipo en todos los modos de opercaión.
+              </td>
+              <td>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Cumple</option>
+                    <option value="on" selected>No Cumple</option>
+                </select>
+              </td>
+          </tr>
+       </table>
+     
+
+     
+    </div>
+       <div data-role="footer" data-position="fixed">
+          
+        <a href="index.html" rel="external" class="ui-btn ui-icon-flat-man ui-btn-icon-left"  style="float: left;" >Cerrar Sesion</a>
+        <a href="#" rel="external" class="ui-btn ui-icon-flat-mail ui-btn-icon-left" style="float: right;" > Contactenos</a>
+
+      </div>
+  </div>
+
+  <div id="highlight"> </div>
+</body>
+</html>
