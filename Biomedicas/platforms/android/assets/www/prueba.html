@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+   <script src="js/jquery.mobile-1.4.0-rc.1.js"></script>
+
+  <style>
+    tr {
+        border-bottom: 1px solid lightgray;
+    }
+  </style>
+</head>
+<body background="img/sena.png">
+  <div data-role="page">
+
+      <div data-role="panel" id="panel" data-position="right" data-theme="a" data-display="push">
+               
+          <ul id="menu">
+               <li><a href="averiados.html" rel="external"> <img src="img/solucion.png"> Equipos Averiados</a></li>
+                <li><a href="solicitud.html" rel="external"><img src="img/pieza.png">Piezas Solicitadas</a></li>
+            </ul>
+      </div>
+
+    <div data-role="header" data-position="fixed">
+      <a href="incubador.html" rel="external" data-iconpos="notext" data-role="button" data-icon="arrow-l" >Atras</a>
+      <h1>BIOMEDICA</h1>
+      <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
+    </div>
+       
+
+    <div data-role="content" role="main">
+        <center>
+            <h1>PRUEBA DE SEGURIDAD ELÉCTRICA</h1>
+          
+            <h3>(Para equipos clase I, tipo BF )</h3>
+            
+        </center>
+     
+      
+            <div data-role="main" class="ui-content">
+              <table data-role="table" data-mode="columntoggle" class="ui-responsive ui-shadow" id="myTable">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Paso de medición</th>
+                    <th  data-priority="1">Norma</th>
+                    <th data-priority="2">Unidad de Medida</th>
+                    <th></th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>TENSION DE RED</td>
+                    <td> 110&plusmn;10%</td>
+                    <td>Voltios</td>
+                    <td><select name="flip-1" id="flip-1" data-role="slider">
+                              <option value="off">Cumple</option>
+                              <option value="on" selected>No Cumple</option>
+                          </select></td>
+
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>POTENCIA</td>
+                    <td>------*</td>
+                    <td>VA</td>
+                    <td><select name="flip-1" id="flip-1" data-role="slider">
+                              <option value="off">Cumple</option>
+                              <option value="on" selected>No Cumple</option>
+                          </select></td>
+
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>CORRIENTE DE FUGA A TIERRA</td>
+                    <td>&le;500</td>
+                    <td>1&mu;A</td>
+                    <td><select name="flip-1" id="flip-1" data-role="slider">
+                              <option value="off">Cumple</option>
+                              <option value="on" selected>No Cumple</option>
+                          </select></td>
+
+                  </tr>
+                  <tr>
+                    <td>3.1</td>
+                    <td> Condición de primera falla (Línea de alimentación abierta).</td>
+                    <td>&le;1000</td>
+                    <td>&mu;A</td>
+                    <td><select name="flip-1" id="flip-1" data-role="slider">
+                              <option value="off">Cumple</option>
+                              <option value="on" selected>No Cumple</option>
+                          </select></td>
+
+                  </tr>
+                   <tr>
+                    <td>4</td>
+                    <td>CORRIENTE DE FUGA DE CHASIS</td>
+                    <td>&le;100</td>
+                    <td>&mu;A</td>
+                    <td><select name="flip-1" id="flip-1" data-role="slider">
+                              <option value="off">Cumple</option>
+                              <option value="on" selected>No Cumple</option>
+                          </select></td>
+
+                  </tr>
+                   <tr>
+                    <td>4.1</td>
+                    <td>Condición de primera falla (Línea de alimentación abierta)</td>
+                    <td>&le;500</td>
+                    <td>&mu;A</td>
+                    <td><select name="flip-1" id="flip-1" data-role="slider">
+                              <option value="off">Cumple</option>
+                              <option value="on" selected>No Cumple</option>
+                          </select></td>
+
+                  </tr>
+                   <tr>
+                    <td>4.2</td>
+                    <td>Condición de segunda falla (Línea de tierra abierta).</td>
+                    <td>&le;500</td>
+                    <td>&mu;A</td>
+                    <td><select name="flip-1" id="flip-1" data-role="slider">
+                              <option value="off">Cumple</option>
+                              <option value="on" selected>No Cumple</option>
+                          </select></td>
+
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>RESISTENCIA DE AISLAMIENTO ENTRE LOS CONDUCTORES DE LINEA A TIERRA</td>
+                    <td> &ge;2</td>
+                    <td>M&Omega;</td>
+                    <td><select name="flip-1" id="flip-1" data-role="slider">
+                              <option value="off">Cumple</option>
+                              <option value="on" selected>No Cumple</option>
+                          </select></td>
+
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>RESISTENCIA DE TIERRA</td>
+                    <td>&le;0.2</td>
+                    <td>&Omega;</td>
+                    <td><select name="flip-1" id="flip-1" data-role="slider">
+                              <option value="off">Cumple</option>
+                              <option value="on" selected>No Cumple</option>
+                          </select></td>
+
+                </tbody>
+              </table>
+            </div>
+                <p>--* El equipo a probar no debe exceder una potencia de consumo de 3.5KW.</p>
+                <BR> 
+           
+
+              <div data-role="main" class="ui-content">
+              <table data-role="table" data-mode="rowtoggle" class="ui-responsive ui-shadow" id="myTable">
+
+                <tbody>
+                  <tr>
+                    <td><b>Material Gastable</b>
+                       <ul>
+                          <li type="disc">Aceite 3 en 1 </li>
+                          <li type="disc">Agua destilada </li>
+                          <li type="disc">Franela</li>
+                          <li type="disc">Jabón neutro</li>
+                          <li type="disc">Limpiador de Contactos</li>
+                       </ul>
+                    </td>
+                    <td><b>Repuestos Mínimos</b> 
+                          <ul>
+                             <li type="disc">Filtro bacteriológico</li>
+                             <li type="disc">Mangas Iris</li> 
+                          </ul>
+                    </td>
+                    <td><b>Herramientas y Equipos</b>
+                       <ul>
+                          <li type="disc">Analizador de seguridad  eléctrica</li>
+                          <li type="disc">Brocha de 2&Prime;</li>
+                          <li type="disc">Destornillador philips</li>
+                          <li type="disc">Destornillador plano</li>
+                          <li type="disc">Flujómetro</li>
+                          <li type="disc">Juego de cubos de 1/4&Prime; y 1/2&Prime;</li>  
+                          <li type="disc">Medidor de decíbeles</li>
+                          <li type="disc">Multímetro</li>
+                          <li type="disc">Pinza punta plana delgada</li>
+                          <li type="disc">Pinza quita seguros externos e internos</li>
+                          <li type="disc">Termómetro</li>  
+                       </ul>
+                    </td>
+                </tbody>
+              </table>
+            </div>  
+
+      </div>
+  
+      <div data-role="footer" data-position="fixed">
+          
+        <a href="index.html" rel="external" class="ui-btn ui-icon-flat-man ui-btn-icon-left"  style="float: left;" >Cerrar Sesion</a>
+       <a href="#" rel="external" class="ui-btn ui-icon-flat-mail ui-btn-icon-left" style="float: right;" > Contactenos</a>
+
+      </div>
+    </div>
+     
+ 
+  
+
+  <div id="highlight"> </div>
+</body>
+</html>

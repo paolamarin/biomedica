@@ -13,33 +13,34 @@
 </head>
 
 
-<body background="img/sena.png">
+<body background="img/ingr.jpg" background-size="200px 20000000px">
    <div data-role="page">
   
       
     <div data-role="header" data-position="fixed">
         <a href="index.html" rel="external" data-iconpos="notext" data-role="button" data-icon="home" >Inicio</a>
-    
+        <a href="infusion.html"></a>
       <h1>BIOMEDICA</h1>
       
     </div>
        
 
     <div data-role="content" role="main">
-        <center><img src="img/medicina.png"><h1>BIENVENIDOS</h1>
-            <H2>Mantenimiento de Equipos Biomedicos</H2>
+        <center><img src="img/medicina.png"><h2>BIENVENIDOS</h2>
+            <H3>Mantenimiento de Equipos Biomedicos</H3>
         </center>
         <SCRIPT  language=JavaScript> 
             function go(){
-                if (document.form.password.value=='1234' && document.form.usuario.value=='paola'){ 
+                if (document.form.password.value=='1234' && document.form.usuario.value=='usuario'){ 
                         document.form.submit(); 
                     }else{ 
-                 alert("Porfavor ingrese, nombre de usuario y contraseña correctos."); 
+                 alert("Por favor ingrese, nombre de usuario y contraseña correctos."); 
                     } 
                 } 
         </SCRIPT> 
-        
-
+        <center>
+        <div data-role="controlgroup" >
+            
         <FORM name=form action="Equipos.html" rel="external" >
             <label> Usuario: </label>
             <INPUT type=text name=usuario id="nombre"> 
@@ -49,15 +50,17 @@
             
             <fieldset class="ui-grid-a">
                 <div class="ui-block-a">
-                    <INPUT onclick=go() type=button value=Acceder>
+                    <INPUT onclick=go() type="button" data-icon="lock"  value=Entrar>
                 </div>
                 <div class="ui-block-b">
-                    ¿No estas registrado? <a href="registro.html"><font color="#000000"><br><b>REGISTRATE</b></font></a>
+                    <a href="#" rel="external"><font color="#000000"><b>¿Olvidaste tu contraseña? </b></font></a>
                 </div>
             </fieldset>
 
         </FORM>
-        
+        </div>
+        </center>
+         
   
     </div>
       

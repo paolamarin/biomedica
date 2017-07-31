@@ -27,14 +27,15 @@
   </script>
  
 </head>
-<body background="img/sena.png">
+<body background="img/fdo.jpg">
   <div data-role="page">
 
       <div data-role="panel" id="panel" data-position="right" data-theme="a" data-display="push">
                
           <ul id="menu">
-               <li><a href="averiados.html" rel="external"> <img src="img/solucion.png"> Equipos Averiados</a></li>
-                <li><a href="#"><img src="img/pieza.png">Piezas Solicitadas</a></li>
+               <li><a href="averiados.html" rel="external"> <img src="img/solucion.png" width="30" height="30"> Equipos Averiados</a></li>
+                <li><a href="solicitud.html" rel="external"><img src="img/pieza.png" width="30" height="30">Piezas Solicitadas</a></li>
+                <li><a href="index.html" rel="external"><img src="img/cerrar.png" width="30" height="30">Cerrar Sesion</a></li>
             </ul>
       </div>
 
@@ -48,7 +49,7 @@
     <div data-role="content" role="main">
         <center>
             <h1>FICHA DE MANTENIMIENTO M&Aacute;QUINA DE ANESTESIA </h1>
-            <img src="img/anestesia.jpg" width="200" height="150" >
+            <img src="img/anestesia.png" width="200" height="200" >
         </center>
        
 
@@ -87,7 +88,7 @@
                 Inspeccionar las condiciones ambientales en las que se encuentra el equipo.
               </td>
               <td>
-                <select name="flip-1" id="flip-1" data-role="slider">
+                <select name="flip-1" id="flip-1" data-role="slider" style="width: 100%;">
                     <option value="off">Cumple</option>
                     <option value="on" selected>No Cumple</option>
                 </select>  
@@ -452,8 +453,7 @@
     </div>
        <div data-role="footer" data-position="fixed">
           
-        <a href="index.html" rel="external" class="ui-btn ui-icon-flat-man ui-btn-icon-left"  style="float: left;" >Cerrar Sesion</a>
-        <a href="#" rel="external" class="ui-btn ui-icon-flat-mail ui-btn-icon-left" style="float: right;" > Contactenos</a>
+        <a data-role="button" href="ayuda.html" rel="external"  data-icon="info" style="float: right;">Ayuda</a>
 
       </div>
   </div>

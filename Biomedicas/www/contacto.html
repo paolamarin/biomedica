@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  
+  <script src="js/jquery.mobile-1.4.0-rc.1.js"></script>
+
+</head>
+
+
+<body background="img/fdo.jpg">
+  <div data-role="page">
+
+    <div data-role="header" data-position="fixed">
+           
+        
+      <h1>BIOMEDICA</h1>
+      <a data-role="button" href="index.html" rel="external" data-icon="arrow-l">Volver</a>
+      <a data-iconpos="notext" data-role="button" href="#" rel="external"  data-icon="location">Info</a>
+    </div>
+      
+   
+  
+
+    <div data-role="content" role="main">
+     
+<center>        
+    
+  
+        <div data-role="controlgroup"> 
+            <img src="img/contacto.png" width="375" height="150">
+            
+                <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+                  <div class="row">
+                          <label for="name">Tu nombre:</label><br />
+                          <input id="name" class="input" name="name" type="text"  placeholder="Tu Nombre" size="30" /><br />
+                  </div>
+                  <div class="row">
+                          <label for="email">Tu E-mail:</label><br />
+                          <input id="email" class="input" name="email" type="email" placeholder="Tu Email" size="30" /><br />
+                  </div>
+                  <div class="row">
+                          <label for="message">Tu mensaje:</label><br />
+                          <textarea id="message" class="input" name="message" placeholder="Tu Mensaje" rows="20" cols="30"></textarea><br />
+                  </div>
+                    <a data-role="button" type="submit" >Enviar Mensaje</a>
+
+               </form>	
+        </div>
+    </center>
+
+
+
+    </div>
+      
+      <div data-role="footer" data-position="fixed" style="text-align:center;">
+          <h4>Manizales &copy;2017</h4>
+         
+      </div>
+      
+  </div>
+    
+    
+
+  
+</body>
+</html>
