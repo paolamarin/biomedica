@@ -8,6 +8,18 @@
   <script src="js/jquery.js"></script>
   <script src="js/jquery.mobile-1.4.0-rc.1.js"></script>
   <script src="js/jquery-ui.min.js"></script>
+  
+  <style>
+       img {
+    max-width: 100%;
+    height: auto;
+}
+
+    body {
+        background: url(img/fdo.jpg) ;
+       background-size:cover; 
+    }
+  </style>
 
    <script>
        $(document).ready(function () {
@@ -22,9 +34,13 @@
                 
     });
       
+      
+      function myFunction() {
+                alert("La máquina necesita revisión");
+            }
   </script>
 </head>
-<body background="img/fdo.jpg">
+<body >
   <div data-role="page">
 
       <div data-role="panel" id="panel" data-position="right" data-theme="a" data-display="push">
@@ -32,13 +48,14 @@
           <ul id="menu">
                <li><a href="averiados.html" rel="external"> <img src="img/solucion.png" width="30" height="30"> Equipos Averiados</a></li>
                 <li><a href="solicitud.html" rel="external"><img src="img/pieza.png" width="30" height="30">Piezas Solicitadas</a></li>
-                <li><a href="index.html" rel="external"><img src="img/cerrar.png" width="30" height="30">Cerrar Sesion</a></li>
+                <li><a href="index.html" rel="external"><img src="img/cerrar.png" width="30" height="30">Cerrar Sesión</a></li>
+                <li><a onclick="myFunction()"><img src="img/alerta.png" width="30" height="30">Generar Alerta</a></li>
             </ul>
       </div>
 
     <div data-role="header" data-position="fixed">
       <a href="Equipos.html" rel="external" data-iconpos="notext" data-role="button" data-icon="home" >Inicio</a>
-      <h1>BIOMEDICA</h1>
+      <h1>BIOAXI</h1>
       <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
     </div>
        
@@ -66,7 +83,7 @@
     
        <div data-role="footer" data-position="fixed">
           
-       <h4>MANIZALES &copy;2017</h4>
+       <h4>SENA Manizales</h4>
         
 
       </div>

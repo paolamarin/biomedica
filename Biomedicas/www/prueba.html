@@ -13,9 +13,32 @@
     tr {
         border-bottom: 1px solid lightgray;
     }
+    
+   
+       img {
+    max-width: 100%;
+    height: auto;
+}
+  body {
+        background: url(img/fdo.jpg) ;
+       background-size:cover; 
+    }
+
+    .containing-element .ui-slider-switch { width: 9em }
+    
   </style>
+  
+  <script>
+      function myFunction() {
+                alert("La máquina necesita revisión");
+            }
+            
+      function form(){
+          alert("Información almacenada");
+      }
+  </script>
 </head>
-<body background="img/fdo.jpg">
+<body>
   <div data-role="page">
 
       <div data-role="panel" id="panel" data-position="right" data-theme="a" data-display="push">
@@ -23,13 +46,14 @@
           <ul id="menu">
                <li><a href="averiados.html" rel="external"> <img src="img/solucion.png" width="30" height="30"> Equipos Averiados</a></li>
                 <li><a href="solicitud.html" rel="external"><img src="img/pieza.png" width="30" height="30">Piezas Solicitadas</a></li>
-                <li><a href="index.html" rel="external"><img src="img/cerrar.png" width="30" height="30">Cerrar Sesion</a></li>
+                <li><a href="index.html" rel="external"><img src="img/cerrar.png" width="30" height="30">Cerrar Sesión</a></li>
+                <li><a onclick="myFunction()"><img src="img/alerta.png" width="30" height="30">Generar Alerta</a></li>
             </ul>
       </div>
 
     <div data-role="header" data-position="fixed">
-      <a href="incubador.html" rel="external" data-iconpos="notext" data-role="button" data-icon="arrow-l" >Atras</a>
-      <h1>BIOMEDICA</h1>
+      <a href="incubador.html" rel="external" data-iconpos="notext" data-role="button" data-icon="arrow-l" >Atrás</a>
+      <h1>BIOAXI</h1>
       <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
     </div>
        
@@ -44,7 +68,7 @@
      
       
             <div data-role="main" class="ui-content">
-              <table data-role="table" data-mode="columntoggle" class="ui-responsive ui-shadow" id="myTable">
+              <table data-role="table" data-mode="columntoggle" class="ui-responsive" id="myTable">
                 <thead>
                   <tr>
                     <th>No</th>
@@ -55,111 +79,147 @@
 
                   </tr>
                 </thead>
+
                 <tbody>
                   <tr>
                     <td>1</td>
                     <td>TENSION DE RED</td>
                     <td> 110&plusmn;10%</td>
                     <td>Voltios</td>
-                    <td><select name="flip-1" id="flip-1" data-role="slider">
-                              <option value="off">Cumple</option>
-                              <option value="on" selected>No Cumple</option>
-                          </select></td>
+                    <td>
+                       <div class="containing-element">
+                          <select name="flip-1" id="flip-1" data-role="slider">
+                            <option value="off">Cumple</option>
+                            <option value="on" selected>No Cumple</option>
+                        </select>
+                      </div>
+                    </td>
 
                   </tr>
+
                   <tr>
                     <td>2</td>
                     <td>POTENCIA</td>
                     <td>------*</td>
                     <td>VA</td>
-                    <td><select name="flip-1" id="flip-1" data-role="slider">
-                              <option value="off">Cumple</option>
-                              <option value="on" selected>No Cumple</option>
-                          </select></td>
-
+                    <td>
+                      <div class="containing-element">
+                          <select name="flip-1" id="flip-1" data-role="slider">
+                             <option value="off">Cumple</option>
+                             <option value="on" selected>No Cumple</option>
+                         </select>
+                       </div>
+                    </td>
                   </tr>
+
                   <tr>
                     <td>3</td>
                     <td>CORRIENTE DE FUGA A TIERRA</td>
                     <td>&le;500</td>
                     <td>1&mu;A</td>
-                    <td><select name="flip-1" id="flip-1" data-role="slider">
-                              <option value="off">Cumple</option>
-                              <option value="on" selected>No Cumple</option>
-                          </select></td>
-
+                    <td>
+                        <div class="containing-element">
+                          <select name="flip-1" id="flip-1" data-role="slider">
+                             <option value="off">Cumple</option>
+                            <option value="on" selected>No Cumple</option>
+                         </select>
+                       </div>
+                    </td>
                   </tr>
+
                   <tr>
                     <td>3.1</td>
                     <td> Condición de primera falla (Línea de alimentación abierta).</td>
                     <td>&le;1000</td>
                     <td>&mu;A</td>
-                    <td><select name="flip-1" id="flip-1" data-role="slider">
-                              <option value="off">Cumple</option>
-                              <option value="on" selected>No Cumple</option>
-                          </select></td>
-
+                    <td>
+                      <div class="containing-element">
+                        <select name="flip-1" id="flip-1" data-role="slider">
+                          <option value="off">Cumple</option>
+                          <option value="on" selected>No Cumple</option>
+                        </select>
+                      </div>
+                    </td>
                   </tr>
+
                    <tr>
                     <td>4</td>
                     <td>CORRIENTE DE FUGA DE CHASIS</td>
                     <td>&le;100</td>
                     <td>&mu;A</td>
-                    <td><select name="flip-1" id="flip-1" data-role="slider">
-                              <option value="off">Cumple</option>
-                              <option value="on" selected>No Cumple</option>
-                          </select></td>
-
+                    <td>
+                      <div class="containing-element">
+                        <select name="flip-1" id="flip-1" data-role="slider">
+                          <option value="off">Cumple</option>
+                          <option value="on" selected>No Cumple</option>
+                        </select>
+                      </div>
+                    </td>
                   </tr>
-                   <tr>
+
+                  <tr>
                     <td>4.1</td>
                     <td>Condición de primera falla (Línea de alimentación abierta)</td>
                     <td>&le;500</td>
                     <td>&mu;A</td>
-                    <td><select name="flip-1" id="flip-1" data-role="slider">
-                              <option value="off">Cumple</option>
-                              <option value="on" selected>No Cumple</option>
-                          </select></td>
-
+                    <td>
+                      <div class="containing-element">
+                         <select name="flip-1" id="flip-1" data-role="slider">
+                            <option value="off">Cumple</option>
+                            <option value="on" selected>No Cumple</option>
+                        </select>
+                      </div>
+                    </td>
                   </tr>
+
                    <tr>
                     <td>4.2</td>
                     <td>Condición de segunda falla (Línea de tierra abierta).</td>
                     <td>&le;500</td>
                     <td>&mu;A</td>
-                    <td><select name="flip-1" id="flip-1" data-role="slider">
-                              <option value="off">Cumple</option>
-                              <option value="on" selected>No Cumple</option>
-                          </select></td>
-
+                    <td>
+                      <div class="containing-element">
+                        <select name="flip-1" id="flip-1" data-role="slider">
+                          <option value="off">Cumple</option>
+                          <option value="on" selected>No Cumple</option>
+                        </select>
+                      </div>
+                    </td>
                   </tr>
+
                   <tr>
                     <td>5</td>
-                    <td>RESISTENCIA DE AISLAMIENTO ENTRE LOS CONDUCTORES DE LINEA A TIERRA</td>
+                    <td>RESISTENCIA DE AISLAMIENTO ENTRE LOS CONDUCTORES <br> DE LÍNEA A TIERRA</td>
                     <td> &ge;2</td>
                     <td>M&Omega;</td>
-                    <td><select name="flip-1" id="flip-1" data-role="slider">
-                              <option value="off">Cumple</option>
-                              <option value="on" selected>No Cumple</option>
-                          </select></td>
-
+                    <td>
+                      <div class="containing-element">
+                        <select name="flip-1" id="flip-1" data-role="slider">
+                            <option value="off">Cumple</option>
+                            <option value="on" selected>No Cumple</option>
+                        </select>
+                      </div>
+                    </td>
                   </tr>
+
                   <tr>
                     <td>6</td>
                     <td>RESISTENCIA DE TIERRA</td>
                     <td>&le;0.2</td>
                     <td>&Omega;</td>
-                    <td><select name="flip-1" id="flip-1" data-role="slider">
-                              <option value="off">Cumple</option>
-                              <option value="on" selected>No Cumple</option>
-                          </select></td>
+                    <td>
+                      <div class="containing-element">
+                        <select name="flip-1" id="flip-1" data-role="slider">
+                            <option value="off">Cumple</option>
+                            <option value="on" selected>No Cumple</option>
+                        </select>
+                      </div>
+                    </td>
 
                 </tbody>
               </table>
             </div>
-                <div data-role="controlgroup" data-type="horizontal" > 
-                     <input style="color: #f3f3f3; background-color: #2c3e50" type="submit" name="submit" value="Enviar"  />
-                </div>
+                 <a href="#" data-role="button" data-icon="flat-checkround" onclick="form()" type="submit">Enviar</a>
              <br>
                 <p>--* El equipo a probar no debe exceder una potencia de consumo de 3.5KW.</p>
                 <BR> 

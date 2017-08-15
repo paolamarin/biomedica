@@ -11,7 +11,19 @@
     <script src="js/jquery.mobile-1.4.0-rc.1.js"></script>
  
 
-  
+  <style>
+       img {
+    max-width: 100%;
+    height: auto;
+}
+
+    body {
+    background: url(img/fdo.jpg) ;
+   background-size:cover; 
+}
+
+.containing-element .ui-slider-switch { width: 9em }
+  </style>
 
    <script>
        $(document).ready(function () {
@@ -26,9 +38,17 @@
                 
     });
       
+      function myFunction() {
+                alert("La máquina necesita revisión");
+            }
+            
+      function form(){
+          alert("Información almacenada");
+      }
+
   </script>
 </head>
-<body background="img/fdo.jpg">
+<body>
   <div data-role="page">
 
       <div data-role="panel" id="panel" data-position="right" data-theme="a" data-display="push">
@@ -36,20 +56,21 @@
            <ul id="menu">
                <li><a href="averiados.html" rel="external"> <img src="img/solucion.png" width="30" height="30"> Equipos Averiados</a></li>
                 <li><a href="solicitud.html" rel="external"><img src="img/pieza.png" width="30" height="30">Piezas Solicitadas</a></li>
-                <li><a href="index.html" rel="external"><img src="img/cerrar.png" width="30" height="30">Cerrar Sesion</a></li>
+                <li><a href="index.html" rel="external"><img src="img/cerrar.png" width="30" height="30">Cerrar Sesión</a></li>
+                <li><a onclick="myFunction()"><img src="img/alerta.png" width="30" height="30">Generar Alerta</a></li>
             </ul>
       </div>
 
     <div data-role="header" data-position="fixed">
       <a href="Equipos.html" rel="external" data-iconpos="notext" data-role="button" data-icon="home" >Inicio</a>
-      <h1>BIOMEDICA</h1>
+      <h1>BIOAXI</h1>
       <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
     </div>
        
 
     <div data-role="content" role="main">
         <center>
-            <h1>FICHA DE MANTENIMIENTO INCUBADORA </h1>
+            <h1>FICHA DE MANTENIMIENTO <br>INCUBADORA </h1>
             <img src="img/incubador.png" width="250" height="250" >
         </center>
        
@@ -57,28 +78,43 @@
       <br>
        <form action="registro.php" method="post">
         <div data-role="fieldcontain">
-            <label for="fecha"> Fecha:</label> <input type="text" data-role="date" data-inline="true" name="fecha" id="fecha">        
+            <label for="fecha"> Fecha:</label> 
+            <br><input type="text" data-role="date" data-inline="true" name="fecha" id="fecha">        
         </div>
+           
         <div data-role="fieldcontain">
-        <label for="nombre">Nombre del equipo:</label> <input type="text" name="nombre" autofocus required/>
+            <label for="nombre">Nombre del equipo:</label> 
+            <br><input type="text" name="nombre" />
         </div>
+           
         <div data-role="fieldcontain">
-        <label for="marca"> Marca: </label> <input type="text" name="marca" autofocus required />
+            <label for="marca"> Marca: </label> 
+            <br><input type="text" name="marca" />
         </div>
+           
         <div data-role="fieldcontain">
-        <label for="modelo"> Modelo: </label> <input type="text" name="modelo" autofocus required />
+            <label for="modelo"> Modelo: </label> 
+            <br><input type="text" name="modelo" />
         </div>
+           
         <div data-role="fieldcontain">
-        <label for="serie"> Serie: </label> <input type="text" name="serie"/>
+            <label for="serie"> Serie: </label> 
+            <br><input type="text" name="serie"/>
         </div>
+           
         <div data-role="fieldcontain">
-        <label for="tecnico"> N° Inv. Tecnico: </label> <input type="text" name="tecnico" autofocus required />
+            <label for="tecnico"> N° Inv. Técnico: </label> 
+            <br><input type="text" name="tecnico"  />
         </div>
+           
         <div data-role="fieldcontain">
-        <label for="id"> ID: </label> <input type="text" name="id" autofocus required />
+            <label for="id"> ID: </label> 
+            <br><input type="text" name="id" />
         </div>
+           
         <div data-role="fieldcontain">
-        <label for="codigo"> Código de Técnico: </label> <input type="text" name="cod" autofocus required/>
+            <label for="codigo"> Código de Técnico: </label> 
+            <br><input type="text" name="cod" />
         </div>
       </form>
       
@@ -86,138 +122,181 @@
       <table data-role="table" data-mode="rowtoggle" class="ui-responsive" id="myTable">
       <tbody>
         <tr>
-          <td>Inspeccionar las condiciones ambientales en las que se encuentra el equipo.</td>
-          <td><select name="flip-1" id="flip-1" data-role="slider">
-                    <option value="off">Cumple</option>
-                    <option value="on" selected>No Cumple</option>
-              </select>
-          </td>
-        </tr>
-        <tr>
-          <td>Efectuar limpieza integral externa.</td>
-          <td><select name="flip-1" id="flip-1" data-role="slider">
-                    <option value="off">Cumple</option>
-                    <option value="on" selected>No Cumple</option>
-                </select> 
-          </td>
-        </tr>
-        <tr>
-          <td>Revisar: gabinete, cubierta, mangas, portamangas y picaporte de sostén</td>
-          <td><select name="flip-1" id="flip-1" data-role="slider">
-                    <option value="off">Cumple</option>
-                    <option value="on" selected>No Cumple</option>
+          <td>Inspeccionar las condiciones ambientales en las que se encuentra el equipo.
+              <br>
+              <div class="containing-element">
+                <select name="flip-1" id="flip-1" data-role="slider">
+                      <option value="off">Cumple</option>
+                      <option value="on" selected>No Cumple</option>
                 </select>
+              </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Efectuar limpieza integral externa.
+              <br>
+              <div class="containing-element">
+                <select name="flip-1" id="flip-1" data-role="slider">
+                      <option value="off">Cumple</option>
+                      <option value="on" selected>No Cumple</option>
+                  </select> 
+              </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Revisar: gabinete, cubierta, mangas, portamangas y picaporte de sostén.
+              <br>
+              <div class="containing-element">
+                <select name="flip-1" id="flip-1" data-role="slider">
+                      <option value="off">Cumple</option>
+                      <option value="on" selected>No Cumple</option>
+                  </select>
+                </div>
           </td>
         </tr>
         <tr>
           <td>Verificar estado de rodos y demás partes móviles por posible desgaste,
-                  lubricar si es necesario.</td>
-          <td><select name="flip-1" id="flip-1" data-role="slider">
-                    <option value="off">Cumple</option>
-                    <option value="on" selected>No Cumple</option>
-                </select>
+                  lubricar si es necesario.
+                  <br>
+                  <div class="containing-element">
+                    <select name="flip-1" id="flip-1" data-role="slider">
+                      <option value="off">Cumple</option>
+                      <option value="on" selected>No Cumple</option>
+                  </select>
+                </div>
           </td>
         </tr>
         <tr>
-          <td>Efectuar limpieza integral interna del equipo.</td>
-          <td><select name="flip-1" id="flip-1" data-role="slider">
-                    <option value="off">Cumple</option>
-                    <option value="on" selected>No Cumple</option>
-                </select>
+          <td>Efectuar limpieza integral interna del equipo.
+              <br>
+              <div class="containing-element">
+                <select name="flip-1" id="flip-1" data-role="slider">
+                      <option value="off">Cumple</option>
+                      <option value="on" selected>No Cumple</option>
+                  </select>
+                </div>
           </td>
         </tr>
         <tr>
           <td>Revisar componente eléctricos y electrónicos 
-                  (calefactor, cable de alimentación, fusible, tomacorriente, etc.)</td>
-          <td><select name="flip-1" id="flip-1" data-role="slider">
-                    <option value="off">Cumple</option>
-                    <option value="on" selected>No Cumple</option>
-                </select>
+                  (calefactor, cable de alimentación, fusible, tomacorriente, etc.).
+                  <br>
+                  <div class="containing-element">
+                    <select name="flip-1" id="flip-1" data-role="slider">
+                      <option value="off">Cumple</option>
+                      <option value="on" selected>No Cumple</option>
+                  </select>
+                </div>
           </td>
         </tr>
         <tr>
-          <td>Revisar sistema neumático (mangueras, conectores, suministro de oxigeno, etc.)</td>
-          <td><select name="flip-1" id="flip-1" data-role="slider">
-                    <option value="off">Cumple</option>
-                    <option value="on" selected>No Cumple</option>
-                </select>
+          <td>Revisar sistema neumático (mangueras, conectores, suministro de oxigeno, etc.).
+              <br>
+              <div class="containing-element">
+                    <select name="flip-1" id="flip-1" data-role="slider">
+                      <option value="off">Cumple</option>
+                      <option value="on" selected>No Cumple</option>
+                  </select>
+                </div>
           </td>
         </tr>
         <tr>
           <td>Verificar estado de funcionamiento (incluyendo vibración) del motor
-                  ventilador, lubricar si es necesario.</td>
-          <td><select name="flip-1" id="flip-1" data-role="slider">
-                    <option value="off">Cumple</option>
-                    <option value="on" selected>No Cumple</option>
-                </select>
+                  ventilador, lubricar si es necesario.
+                  <br>
+                  <div class="containing-element">
+                    <select name="flip-1" id="flip-1" data-role="slider">
+                      <option value="off">Cumple</option>
+                      <option value="on" selected>No Cumple</option>
+                  </select>
+                </div>
           </td>
         </tr>
         <tr>
-          <td>Realizar prueba de nivel de ruido (<68 dB)</td>
-          <td><select name="flip-1" id="flip-1" data-role="slider">
-                    <option value="off">Cumple</option>
-                    <option value="on" selected>No Cumple</option>
-                </select>
+          <td>Realizar prueba de nivel de ruido (< 68 dB).
+              <br>
+              <div class="containing-element">
+                    <select name="flip-1" id="flip-1" data-role="slider">
+                      <option value="off">Cumple</option>
+                      <option value="on" selected>No Cumple</option>
+                  </select>
+                </div>
           </td>
         </tr>
         <tr>
           <td>Comprobar entrada de oxigeno, aire, depósito de agua, y filtro
-                  bacteriológico cambiarlo.</td>
-          <td><select name="flip-1" id="flip-1" data-role="slider">
-                    <option value="off">Cumple</option>
-                    <option value="on" selected>No Cumple</option>
-                </select>
-          </td>
+                  bacteriológico cambiarlo.
+                  <br>
+                  <div class="containing-element">
+                    <select name="flip-1" id="flip-1" data-role="slider">
+                      <option value="off">Cumple</option>
+                      <option value="on" selected>No Cumple</option>
+                  </select>
+                </div>
         </tr>
         <tr>
           <td>Comprobar funcionamiento de sistema servocontrolado (si el 
-                  equipo cuenta con ello).</td>
-          <td><select name="flip-1" id="flip-1" data-role="slider">
-                    <option value="off">Cumple </option>
-                    <option value="on" selected>No Cumple</option>
-                </select>
+                  equipo cuenta con ello).
+                  <br>
+                  <div class="containing-element">
+                    <select name="flip-1" id="flip-1" data-role="slider">
+                      <option value="off">Cumple</option>
+                      <option value="on" selected>No Cumple</option>
+                  </select>
+                </div>
           </td>
         </tr>
          <tr>
           <td>Verificar indicadores y alarmas, visuales y acusticas (temperatura
-              30&deg;C a 40&deg;C) y sus sensores.</td>
-          <td><select name="flip-1" id="flip-1" data-role="slider">
-                    <option value="off">Cumple</option>
-                    <option value="on" selected>No Cumple</option>
-                </select>
+              30&deg;C a 40&deg;C) y sus sensores.
+              <br>
+              <div class="containing-element">
+                    <select name="flip-1" id="flip-1" data-role="slider">
+                      <option value="off">Cumple</option>
+                      <option value="on" selected>No Cumple</option>
+                  </select>
+                </div>
           </td>
         </tr>
          <tr>
-          <td>Verificar parametros de funcionamiento: temperatura, oxígeno, humedad.</td>
-          <td><select name="flip-1" id="flip-1" data-role="slider">
-                    <option value="off">Cumple</option>
-                    <option value="on" selected>No Cumple</option>
-                </select>
+          <td>Verificar parametros de funcionamiento: temperatura, oxígeno, humedad.
+              <br>
+              <div class="containing-element">
+                    <select name="flip-1" id="flip-1" data-role="slider">
+                      <option value="off">Cumple</option>
+                      <option value="on" selected>No Cumple</option>
+                  </select>
+                </div>
           </td>
         </tr>
          <tr>
-          <td>Realizar prueba de seguridad eléctrica <a href="prueba.html" rel="external">(ver).</a></td>
-          <td><select name="flip-1" id="flip-1" data-role="slider">
-                    <option value="off">Cumple</option>
-                    <option value="on" selected>No Cumple</option>
-                </select>
+          <td>Realizar prueba de seguridad eléctrica <a href="prueba.html" rel="external">(ver).</a>
+              <br>
+              <div class="containing-element">
+                    <select name="flip-1" id="flip-1" data-role="slider">
+                      <option value="off">Cumple</option>
+                      <option value="on" selected>No Cumple</option>
+                  </select>
+                </div>
           </td>
         </tr>
          <tr>
-          <td>Verificar el funcionamiento del equipo en todos los modos de operación.</td>
-          <td><select name="flip-1" id="flip-1" data-role="slider">
-                    <option value="off">Cumple</option>
-                    <option value="on" selected>No Cumple</option>
-                </select>
+          <td>Verificar el funcionamiento del equipo en todos los modos de operación.
+              <br>
+             <div class="containing-element">
+                    <select name="flip-1" id="flip-1" data-role="slider">
+                      <option value="off">Cumple</option>
+                      <option value="on" selected>No Cumple</option>
+                  </select>
+                </div>
           </td>
         </tr>
 
       </tbody>
     </table>
       
-      <div class="ui-block-a">
-                    <input style="color: #f3f3f3; background-color: #16a085" type="submit" name="submit" value="Enviar"  />
-                </div>
+      <a href="#" data-role="button" onclick="form()" data-icon="flat-checkround" type="submit">Enviar</a>
+      
   </div>
 
  <div data-role="footer" data-position="fixed">

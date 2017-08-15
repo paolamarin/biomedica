@@ -8,6 +8,17 @@
   <script src="js/jquery.js"></script>
   <script src="js/jquery.mobile-1.4.0-rc.1.js"></script>
   <script src="js/jquery-ui.min.js"></script>
+  
+  <style>
+       img {
+    max-width: 100%;
+    height: auto;
+}
+body {
+    background: url(img/fdo.jpg) ;
+   background-size:cover; 
+}
+  </style>
 
    <script>
        $(document).ready(function () {
@@ -22,9 +33,16 @@
                 
     });
       
+      function myFunction() {
+                alert("La máquina necesita revisión");
+            }
+      
+      function form(){
+          alert("Información almacenada");
+      }
   </script>
 </head>
-<body background="img/fdo.jpg">
+<body>
   <div data-role="page">
 
       <div data-role="panel" id="panel" data-position="right" data-theme="a" data-display="push">
@@ -32,13 +50,14 @@
           <ul id="menu">
                <li><a href="averiados.html" rel="external"> <img src="img/solucion.png" width="30" height="30"> Equipos Averiados</a></li>
                 <li><a href="solicitud.html" rel="external"><img src="img/pieza.png" width="30" height="30">Piezas Solicitadas</a></li>
-                <li><a href="index.html" rel="external"><img src="img/cerrar.png" width="30" height="30">Cerrar Sesion</a></li>
+                <li><a href="index.html" rel="external"><img src="img/cerrar.png" width="30" height="30">Cerrar Sesión</a></li>
+                <li><a onclick="myFunction()"><img src="img/alerta.png" width="30" height="30">Generar Alerta</a></li>
             </ul>
       </div>
 
     <div data-role="header" data-position="fixed">
       <a href="Equipos.html" rel="external" data-iconpos="notext" data-role="button" data-icon="home" >Inicio</a>
-      <h1>BIOMEDICA</h1>
+      <h1>BIOAXI</h1>
       <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
     </div>
        
@@ -56,28 +75,36 @@
       <form action="registro.php" method="post">
         <div data-role="fieldcontain">
             <label for="fecha"> Fecha:</label> 
-            <input type="text" data-role="date" data-inline="true" name="fecha" id="fecha">        </div>
-        <div data-role="fieldcontain">
-            <label for="nombre"> Nombre equipo: </label> <input type="text" name="nombre" autofocus required/>
+            <br><input type="text" data-role="date" data-inline="true" name="fecha" id="fecha">       
         </div>
+          
         <div data-role="fieldcontain">
-            <label for="marca"> Marca: </label> <input type="text" name="marca" autofocus required />
+            <label for="nombre"> Nombre equipo: </label> 
+            <br><input type="text" name="nombre" />
         </div>
+          
         <div data-role="fieldcontain">
-            <label for="modelo"> Modelo: </label> <input type="text" name="modelo" autofocus required />
+            <label for="marca"> Marca: </label> 
+            <br><input type="text" name="marca"  />
         </div>
+          
         <div data-role="fieldcontain">
-            <label for="serie"> Serie: </label> <input type="text" name="serie"/>
+            <label for="modelo"> Modelo: </label> 
+            <br><input type="text" name="modelo"  />
         </div>
+          
+        <div data-role="fieldcontain">
+            <label for="serie"> Serie: </label> 
+            <br><input type="text" name="serie"/>
+        </div>
+          
          <div data-role="fieldcontain">
             <label for="tipo"> Tipo de Daño: </label>
-            <textarea type="text" name="tipo" autofocus required></textarea>
+            <br><textarea type="text" name="tipo" ></textarea>
          </div>
-           <fieldset class="ui-grid-a">
-                <div class="ui-block-a"><button data-icon="flat-checkround"data-theme="a" type="submit">Enviar</button></div>
-                <div class="ui-block-b"><button data-icon="flat-new" data-theme="a" type="submit">Editar</button></div>
-        </fieldset>
-         
+          
+          <a href="#" data-role="button" data-icon="flat-checkround" onclick="form()" type="submit">Enviar</a>
+        
       
      </form>
      </div>

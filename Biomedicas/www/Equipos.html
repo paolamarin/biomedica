@@ -16,14 +16,25 @@
         margin: 20px;
         }
         
-       /* div#panel {
-            background-color: #2c3e50;
-        }*/
+   img {
+    max-width: 100%;
+    height: auto;
+}
        
+body {
+    background: url(img/fdo.jpg) ;
+   background-size:cover; 
+}
    </style>
 
+   
+        <script>
+            function myFunction() {
+                alert("La máquina necesita revisión");
+            }
+        </script>
 </head>
-<body background="img/fdo.jpg">
+<body>
     
   <div data-role="page">
     
@@ -33,28 +44,28 @@
            <ul id="menu" >
                <li><a href="averiados.html" rel="external" > <img src="img/solucion.png" width="30" height="30"> Equipos Averiados</a></li>
                <li><a href="solicitud.html" rel="external"><img src="img/pieza.png" width="30" height="30">Piezas Solicitadas</a></li>
-               <li><a href="index.html" rel="external"><img src="img/cerrar.png" width="30" height="30">Cerrar Sesion</a></li>
+               <li><a href="index.html" rel="external"><img src="img/cerrar.png" width="30" height="30">Cerrar Sesión</a></li>
+               <li><a onclick="myFunction()"><img src="img/alerta.png" width="30" height="30">Generar Alerta</a></li>
             </ul>
       </div>
 
     <div data-role="header" data-position="fixed">
         <a data-iconpos="notext" data-role="button" data-icon="home" href="Equipos.html" rel="external" >Inicio</a>
-      <h1>BIOMEDICA</h1>
+      <h1>BIOAXI</h1>
       <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
     </div>
      
      
 
-    <div data-role="content" role="main">
-        <center>
-           <br> <img src="img/equi.png" width="550" height="150">
-        </center>
+    <div data-role="content" role="main" >
+        <a href="universal.html" rel="external" data-role="button" data-theme="b">
+            <img src="img/inspeccion.png" width="30" height="30"> Inspección Universal</a>
         <br>
     
       <div data-role="collapsible-set" data-theme="b" data-content-theme="b" >
-        <div data-role="collapsible" data-collapsed-icon="flat-eye" data-expanded-icon="flat-cross" data-collapsed="false">
+        <div data-role="collapsible" data-collapsed-icon="flat-eye" data-expanded-icon="flat-cross" data-collapsed="false" >
           <h3>Incubador</h3>
-          <br><img style="float: left;" src="img/incubador.png" width="290" height="300" >
+          <br><img src="img/incubador.png" width="290" height="300" >
           <p style="text-align: justify ">
                 El término incubadora suele aplicarse a los dispositivos empleados para mantener 
                 calientes a niños prematuros o débiles. El recién nacido pierde temperatura de cuatro 
@@ -81,7 +92,7 @@
           
         <div data-role="collapsible" data-collapsed-icon="flat-eye" data-expanded-icon="flat-cross">
           <h3>M&aacute;quina de Anestesia</h3>
-          <br><img style="float: right;" src="img/anestesia.png" width="235" height="250" >
+          <br><img src="img/anestesia.png" width="235" height="250">
                         <p style="text-align: justify">
                           La máquina de anestesia fue concebida originalmente como un aparato, capaz de administrar gases 
                           anestésicos aprovechando la absorción pulmonar de estos.
@@ -110,40 +121,28 @@
           
         <div data-role="collapsible" data-collapsed-icon="flat-eye" data-expanded-icon="flat-cross">
           <h3>Desfibrilador</h3>
-          <table data-role="table" data-mode="rowtoggle" class="ui-responsive" id="myTable">
-              <tbody>
-                  <tr>
-                      <td><br><img src="img/desfibrilador.png" width="250" height="200" ></td>
-                      <td><p style="text-align: justify">
+          <br><img src="img/desfibrilador.png" width="250" height="200" ></td>
+                      <p style="text-align: justify">
                         Un desfibrilador es un dispositivo que administra una descarga el&eacute;ctrica al coraz&oacute;n 
                         a través de la pared tor&aacute;cica. Sus sensores integrados analizan el ritmo cardiaco del 
                         paciente, determinan cuando es necesaria la desfibrilaci&oacute;n y administran la descarga 
                         al nivel de intensidad apropiado.
-                      </p></td>
-                  </tr>
-              </tbody>
-          </table>
+                      </p>
+              
           <div style="text-align: center">
-               <a href="#" rel="external" > <img src="img/ingresar.png" width="200" height="75"></a>
+               <a href="desfibrilador.html" rel="external" > <img src="img/ingresar.png" width="200" height="75"></a>
            </div>
         </div>
           
         <div data-role="collapsible" data-collapsed-icon="flat-eye" data-expanded-icon="flat-cross">
           <h3>Bomba de Infusi&oacute;n</h3>
-          <table data-role="table" data-mode="rowtoggle" class="ui-responsive" id="myTable">
-              <tbody>
-                  <tr>
-                      <td><br><img src="img/bomba.png" width="195" height="150" ></td>
-                      <td><p style="text-align: justify">
+            <br><img src="img/bomba.png" width="195" height="150" ></td>
+                    <p style="text-align: justify">
                             Las bombas de infusi&oacute;n generan presi&oacute;n mec&aacute;nica para mover el fluido a trav&eacute;s 
                             de un tubo hacia el sistema vascular del paciente, ayudando a administrar los fluidos 
                             con m&aacute;s precisi&oacute;n.
                         </p>
-                      </td>
-                  </tr>
-              </tbody>
-          </table>
-          <center></center>
+                  
           <div style="text-align: center">
                <a href="infusion.html" rel="external"><img src="img/ingresar.png" width="200" height="100"> </a>
            </div>

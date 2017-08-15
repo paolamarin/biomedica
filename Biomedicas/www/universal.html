@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+ 
+  <script src="js/jquery.mobile-1.4.0-rc.1.js"></script>
+  
+  <style>
+       img {
+          max-width: 100%;
+          height: auto;
+      }
+
+    body {
+        background: url(img/universal.jpg) ;
+       background-size:cover; 
+    }
+
+   
+
+    .containing-element .ui-slider-switch { width: 9em }
+  </style>
+
+   <script>
+       $(document).ready(function () {
+                $("#fecha").datepicker({
+                    showOtherMonths: true,
+                    selectOtherMonths: true,
+                    changeMonth: true,
+                    changeYear: true,
+                    showButtonPanel: true,
+                    dateFormat: 'yy-mm-dd'
+                });
+                
+    });
+      
+      function myFunction() {
+                alert("La máquina necesita revisión");
+            }
+       
+      function form(){
+          alert("Información almacenada");
+      }
+  </script>
+ 
+</head>
+<body>
+  <div data-role="page">
+
+      <div data-role="panel" id="panel" data-position="right" data-theme="a" data-display="push">
+               
+          <ul id="menu">
+               <li><a href="averiados.html" rel="external"> <img src="img/solucion.png" width="30" height="30"> Equipos Averiados</a></li>
+                <li><a href="solicitud.html" rel="external"><img src="img/pieza.png" width="30" height="30">Piezas Solicitadas</a></li>
+                <li><a href="index.html" rel="external"><img src="img/cerrar.png" width="30" height="30">Cerrar Sesión</a></li>
+                <li><a onclick="myFunction()"><img src="img/alerta.png" width="30" height="30">Generar Alerta</a></li>
+            </ul>
+      </div>
+
+    <div data-role="header" data-position="fixed">
+      <a href="Equipos.html" rel="external" data-iconpos="notext" data-role="button" data-icon="home" >Inicio</a>
+      <h1>BIOAXI</h1>
+      <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
+    </div>
+       
+
+    <div data-role="content" role="main">
+        <center>
+            <img src="img/inspeccion.png" width="150" height="150" >
+            <h2>FORMATO DE INSPECCIÓN UNIVERSAL </h2>
+            
+        </center>
+       
+
+      <br>
+      <form action="registro.php" method="post">
+          <div data-role="fieldcontain">
+              <label for="control"> Control No: </label>
+              <br><input type="text" name="control" />        
+          </div>
+          
+          <div data-role="fieldcontain">
+              <label for="ubic">Ubicación: </label> 
+              <br><input type="text" name="ubic" />
+          </div>
+            
+          <div data-role="fieldcontain">
+              <label for="disp"> Tipo de Dispositivo: </label> 
+              <br><input type="text" name="disp" />
+          </div>
+            
+          <div data-role="fieldcontain">
+              <label for="fab"> Fabricante: </label> 
+              <br><input type="text" name="fab" />
+          </div>
+            
+          <div data-role="fieldcontain">
+              <label for="mod"> Modelo: </label> 
+              <br><input type="text" name="mod"/>
+          </div>
+            
+          <div data-role="fieldcontain">
+          <label for="serial"> Serial No: </label> 
+              <br><input type="text" name="serial"  />
+              </div>
+            
+          <div data-role="fieldcontain">
+              <label for="insp"> Inspector: </label> 
+              <br><input type="text" name="insp"  />
+          </div>
+            
+             <div data-role="fieldcontain">
+              <label for="fecha"> Fecha:</label>
+              <br><input type="text" data-role="date" data-inline="true" name="fecha" id="fecha">        
+          </div>
+      
+      
+          <fieldset class="ui-grid-a">
+            <div class="ui-block-a"><label><input type="checkbox" id="cbox1" value="first_checkbox" data-theme="c"> Mayor</label></div>
+            <div class="ui-block-b"><label><input type="checkbox" id="cbox2" value="second_checkbox" data-theme="c"> Menor</label></div>
+          </fieldset>
+          <fieldset class="ui-grid-a">
+            <div class="ui-block-a"><label><input type="checkbox" id="cbox3" value="third_checkbox" data-theme="c"> Aceptado</label></div>
+          </fieldset>
+
+              <div data-role="fieldcontain">
+                  <h4>Componentes del sistema</h4>
+                  <br>
+                    <label for="control"> Control No: </label>
+                    <br><input type="text" name="control"/>        
+                </div>
+
+                 <div data-role="fieldcontain">
+                    <label for="desc"> Descripción: </label> 
+                    <br><input type="text" name="desc"  />
+                </div>
+
+                  <h4>Estado</h4>
+
+
+                <fieldset class="ui-grid-a">
+                    <div class="ui-block-a"><label><input type="checkbox" id="cbox4" value="first_checkbox" data-theme="c"> Aprobado</label></div>
+                    <div class="ui-block-b"><label><input type="checkbox" id="cbox5" value="second_checkbox" data-theme="c"> Requiere Servicio</label></div>
+                </fieldset>
+                <fieldset class="ui-grid-a">
+                    <div class="ui-block-a"><label><input type="checkbox" id="cbox6" value="third_checkbox" data-theme="c"> Sacar de Servicio</label></div>
+                </fieldset>
+
+                <div data-role="fieldcontain">
+                    <label for="orden"> Orden de trabajo No:  </label> 
+                    <br><input type="text" name="orden"  />
+                </div>
+
+          </form>
+         
+
+
+       
+      <br>
+      <div data-role="main" class="ui-content">
+              <table data-role="table" data-mode="" class="ui-responsive" id="myTable">
+                <thead>
+                  <tr>
+                    <th>1.</th>
+                    <th >Prueba cualitativa</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+                  <tr>
+                    <td>1.1</td>
+                    <td>Chasis/Carcasa.
+                        <br>
+                        <div class="containing-element">
+                            <select name="flip-1" id="flip-1" data-role="slider">
+                              <option value="off">Cumple</option>
+                              <option value="on" selected>No Cumple</option>
+                          </select>
+                        </div> 
+                        <br>
+                        <textarea id="comentario" class="input" name="comentario" placeholder="Comentarios" rows="10" cols="50"></textarea>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td>1.2</td>
+                    <td>Base/Soportes.
+                        <br>
+                          <div class="containing-element">
+                            <select name="flip-1" id="flip-1" data-role="slider">
+                              <option value="off">Cumple</option>
+                              <option value="on" selected>No Cumple</option>
+                            </select>
+                          </div>  
+                        <br>
+                        <textarea id="comentario" class="input" name="comentario" placeholder="Comentarios" rows="10" cols="50"></textarea>
+                    </td>
+                 </tr>
+                 
+                  <tr>
+                    <td>1.3</td>
+                    <td>Ruedas/Frenos
+                        <br>
+                        <div class="containing-element">
+                            <select name="flip-1" id="flip-1" data-role="slider">
+                              <option value="off">Cumple</option>
+                              <option value="on" selected>No Cumple</option>
+                            </select>
+                          </div> 
+                        <br>
+                        <textarea id="comentario" class="input" name="comentario" placeholder="Comentarios" rows="10" cols="50"></textarea>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td>1.4</td>
+                    <td> Enchufe AC/Tomas
+                        <br>
+                        <div class="containing-element">
+                            <select name="flip-1" id="flip-1" data-role="slider">
+                              <option value="off">Cumple</option>
+                              <option value="on" selected>No Cumple</option>
+                            </select>
+                          </div> 
+                        <br>
+                        <textarea id="comentario" class="input" name="comentario" placeholder="Comentarios" rows="10" cols="50"></textarea>
+                    </td>
+                  </tr>
+                  
+                   <tr>
+                    <td>1.5</td>
+                    <td>Cable de Alimentación
+                        <br>
+                        <div class="containing-element">
+                            <select name="flip-1" id="flip-1" data-role="slider">
+                              <option value="off">Cumple</option>
+                              <option value="on" selected>No Cumple</option>
+                            </select>
+                          </div> 
+                        <br>
+                        <textarea id="comentario" class="input" name="comentario" placeholder="Comentarios" rows="10" cols="50"></textarea>
+                    </td>
+                   </tr>
+                   
+                   <tr>
+                    <td>1.6</td>
+                    <td>Anclaje del Cordón
+                        <br>
+                        <div class="containing-element">
+                            <select name="flip-1" id="flip-1" data-role="slider">
+                              <option value="off">Cumple</option>
+                              <option value="on" selected>No Cumple</option>
+                            </select>
+                          </div> 
+                        <br>
+                        <textarea id="comentario" class="input" name="comentario" placeholder="Comentarios" rows="10" cols="50"></textarea>
+                    </td>
+                   </tr>
+                   
+                   <tr>
+                    <td>1.7</td>
+                    <td>Circuito de Protección/Fusibles
+                        <br>
+                        <div class="containing-element">
+                            <select name="flip-1" id="flip-1" data-role="slider">
+                              <option value="off">Cumple</option>
+                              <option value="on" selected>No Cumple</option>
+                            </select>
+                          </div> 
+                        <br>
+                        <textarea id="comentario" class="input" name="comentario" placeholder="Comentarios" rows="10" cols="50"></textarea>
+                    </td>
+                   </tr>
+                   
+                   <tr>
+                    <td>1.8</td>
+                    <td>Tubos/Mangueras
+                        <br>
+                        <div class="containing-element">
+                            <select name="flip-1" id="flip-1" data-role="slider">
+                              <option value="off">Cumple</option>
+                              <option value="on" selected>No Cumple</option>
+                            </select>
+                          </div> 
+                        <br>
+                        <textarea id="comentario" class="input" name="comentario" placeholder="Comentarios" rows="10" cols="50"></textarea>
+                    </td>
+                   </tr>
+                   
+                   <tr>
+                    <td>1.9</td>
+                    <td>Cables
+                        <br>
+                        <div class="containing-element">
+                            <select name="flip-1" id="flip-1" data-role="slider">
+                              <option value="off">Cumple</option>
+                              <option value="on" selected>No Cumple</option>
+                            </select>
+                          </div> 
+                        <br>
+                        <textarea id="comentario" class="input" name="comentario" placeholder="Comentarios" rows="10" cols="50"></textarea>
+                    </td>
+                   </tr>
+                   
+                   <tr>
+                    <td>1.10</td>
+                    <td>Adaptadores/Conectores
+                        <br>
+                        <div class="containing-element">
+                            <select name="flip-1" id="flip-1" data-role="slider">
+                              <option value="off">Cumple</option>
+                              <option value="on" selected>No Cumple</option>
+                            </select>
+                          </div> 
+                        <br>
+                        <textarea id="comentario" class="input" name="comentario" placeholder="Comentarios" rows="10" cols="50"></textarea>
+                    </td>
+                   </tr>
+                   
+                   <tr>
+                    <td>1.11</td>
+                    <td>Electrodos/Transductores
+                        <br>
+                        <div class="containing-element">
+                            <select name="flip-1" id="flip-1" data-role="slider">
+                              <option value="off">Cumple</option>
+                              <option value="on" selected>No Cumple</option>
+                            </select>
+                          </div> 
+                        <br>
+                        <textarea id="comentario" class="input" name="comentario" placeholder="Comentarios" rows="10" cols="50"></textarea>
+                    </td>
+                   </tr>
+                
+                </tbody>
+              </table>
+            </div>
+
+            <fieldset class="ui-grid-a">
+                <div class="ui-block-a"><a href="universal2.html" rel="external" data-role="button" data-icon="arrow-r">Siguiente</a></div>
+                </fieldset>
+      
+     
+
+     
+    </div>
+       <div data-role="footer" data-position="fixed">
+          
+        <a data-role="button" href="ayuda.html" rel="external"  data-icon="info" style="float: right;">Ayuda</a>
+
+      </div>
+  </div>
+
+  <div id="highlight"> </div>
+</body>
+</html>

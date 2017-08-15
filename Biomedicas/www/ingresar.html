@@ -10,24 +10,36 @@
   <script src="js/jquery-ui.min.js"></script>
   
   <script src="js/jquery.mobile-1.4.0-rc.1.js"></script>
+  
+  <style>
+       img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+        background: url(img/ingr.jpg) ;
+       background-size:cover; 
+    }
+  </style>
 </head>
 
 
-<body background="img/ingr.jpg" background-size="200px 20000000px">
+<body>
    <div data-role="page">
   
       
     <div data-role="header" data-position="fixed">
         <a href="index.html" rel="external" data-iconpos="notext" data-role="button" data-icon="home" >Inicio</a>
         <a href="infusion.html"></a>
-      <h1>BIOMEDICA</h1>
+      <h1>BIOAXI</h1>
       
     </div>
        
 
     <div data-role="content" role="main">
         <center><img src="img/medicina.png"><h2>BIENVENIDOS</h2>
-            <H3>Mantenimiento de Equipos Biomedicos</H3>
+            <H3>Mantenimiento de Equipos Biomédicos</H3>
         </center>
         <SCRIPT  language=JavaScript> 
             function go(){
@@ -49,12 +61,11 @@
             <INPUT type=password name=password> 
             
             <fieldset class="ui-grid-a">
-                <div class="ui-block-a">
+               
                     <INPUT onclick=go() type="button" data-icon="lock"  value=Entrar>
-                </div>
-                <div class="ui-block-b">
+              
                     <a href="#" rel="external"><font color="#000000"><b>¿Olvidaste tu contraseña? </b></font></a>
-                </div>
+               
             </fieldset>
 
         </FORM>
@@ -65,7 +76,7 @@
     </div>
       
       <div data-role="footer" data-position="fixed">
-          <h4>MANIZALES &copy;2017</h4>
+          <h4>SENA Manizales</h4>
       </div>
   </div>
     
